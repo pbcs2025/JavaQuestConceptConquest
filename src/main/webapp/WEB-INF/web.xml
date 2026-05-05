@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <servlet>
+        <servlet-name>StartServlet</servlet-name>
+        <servlet-class>com.javaquest.servlet.StartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StartServlet</servlet-name>
+        <url-pattern>/start</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RoomServlet</servlet-name>
+        <servlet-class>com.javaquest.servlet.RoomServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoomServlet</servlet-name>
+        <url-pattern>/room</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AnswerServlet</servlet-name>
+        <servlet-class>com.javaquest.servlet.AnswerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AnswerServlet</servlet-name>
+        <url-pattern>/answer</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdvanceServlet</servlet-name>
+        <servlet-class>com.javaquest.servlet.AdvanceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdvanceServlet</servlet-name>
+        <url-pattern>/advance</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HintServlet</servlet-name>
+        <servlet-class>com.javaquest.servlet.HintServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HintServlet</servlet-name>
+        <url-pattern>/hint</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GameOverServlet</servlet-name>
+        <servlet-class>com.javaquest.servlet.GameOverServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GameOverServlet</servlet-name>
+        <url-pattern>/gameover</url-pattern>
+    </servlet-mapping>
+
+</web-app>
