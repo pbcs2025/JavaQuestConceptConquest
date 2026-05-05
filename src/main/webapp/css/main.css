@@ -1,0 +1,122 @@
+/* ── GOOGLE FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700&display=swap');
+
+/* ── COLOUR PALETTE — Dark Code Editor Theme ── */
+:root {
+  --bg-dark:       #0D1117;
+  --bg-panel:      #161B22;
+  --bg-surface:    #21262D;
+  --accent-blue:   #58A6FF;
+  --accent-gold:   #E3B341;
+  --correct-green: #3FB950;
+  --wrong-red:     #F85149;
+  --text-primary:  #E6EDF3;
+  --text-muted:    #8B949E;
+  --border:        #30363D;
+  --diff-easy:     #3FB950;
+  --diff-medium:   #E3B341;
+  --diff-hard:     #F85149;
+  --diff-expert:   #BC8CFF;
+}
+
+/* ── RESET & BASE ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+code, pre, .monospace {
+  font-family: 'Fira Code', monospace;
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  outline: none;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── HEADER BAR ── */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 28px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-bar .logo {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.1rem;
+  color: var(--accent-gold);
+  letter-spacing: 1px;
+}
+
+.header-bar .player-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+#score-display {
+  color: var(--accent-gold);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* ── DIFFICULTY PILLS ── */
+.pill {
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pill-easy   { background: var(--diff-easy);   color: #000; }
+.pill-medium { background: var(--diff-medium);  color: #000; }
+.pill-hard   { background: var(--diff-hard);    color: #fff; }
+.pill-expert { background: var(--diff-expert);  color: #fff; }
+
+/* ── CARDS ── */
+.card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+/* ── ERROR BOX ── */
+.error-box {
+  background: rgba(248, 81, 73, 0.15);
+  border: 1px solid var(--wrong-red);
+  color: var(--wrong-red);
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+}

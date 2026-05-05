@@ -1,0 +1,135 @@
+/* ── CODE RAIN — Welcome Screen ── */
+@keyframes codeRain {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.code-rain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.rain-char {
+  position: absolute;
+  top: -20px;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  color: var(--correct-green);
+  opacity: 0.15;
+  animation: codeRain linear infinite;
+  user-select: none;
+}
+
+/* ── UNLOCK POP — Padlock Opens ── */
+@keyframes unlockPop {
+  0%   { transform: scale(1);   color: var(--text-muted); }
+  40%  { transform: scale(1.3); color: var(--correct-green); }
+  70%  { transform: scale(0.9); color: var(--correct-green); }
+  100% { transform: scale(1);   color: var(--correct-green); }
+}
+
+.unlock-pop {
+  animation: unlockPop 0.6s ease-out forwards;
+}
+
+/* ── SCORE POP — Score Updates ── */
+@keyframes scorePop {
+  0%   { transform: scale(1);   color: var(--accent-gold); }
+  50%  { transform: scale(1.4); color: #fff; }
+  100% { transform: scale(1);   color: var(--accent-gold); }
+}
+
+.score-pop {
+  animation: scorePop 0.4s ease-out forwards;
+}
+
+/* ── CARD FLIP — Question Changes ── */
+@keyframes cardFlipIn {
+  0%   { transform: rotateY(90deg); opacity: 0; }
+  100% { transform: rotateY(0deg);  opacity: 1; }
+}
+
+.card-flip-in {
+  animation: cardFlipIn 0.3s ease-in-out forwards;
+  perspective: 1000px;
+}
+
+/* ── PROGRESS FILL — Slot Fills Green ── */
+@keyframes progressFill {
+  0%   { transform: scaleX(0); background: var(--bg-surface); }
+  100% { transform: scaleX(1); background: var(--correct-green); }
+}
+
+/* ── CORRECT FLASH — Green Button Flash ── */
+@keyframes correctFlash {
+  0%   { box-shadow: 0 0 0px var(--correct-green); }
+  40%  { box-shadow: 0 0 18px var(--correct-green); }
+  100% { box-shadow: 0 0 0px var(--correct-green); }
+}
+
+/* ── WRONG SHAKE — Red Shake ── */
+@keyframes wrongShake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-6px); }
+  40%  { transform: translateX(6px); }
+  60%  { transform: translateX(-6px); }
+  80%  { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+/* ── FADE IN — General entrance ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* ── RANK BADGE — Game Over Screen ── */
+@keyframes badgePop {
+  0%   { transform: scale(0) rotate(-10deg); opacity: 0; }
+  60%  { transform: scale(1.15) rotate(3deg); opacity: 1; }
+  80%  { transform: scale(0.95) rotate(-1deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.badge-pop {
+  animation: badgePop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ── SCORE COUNT UP — Final Score ── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.score-count-up {
+  animation: countUp 0.6s ease-out 0.3s both;
+}
+
+/* ── WELCOME CARD ENTRANCE ── */
+@keyframes welcomeSlideUp {
+  0%   { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0);    opacity: 1; }
+}
+
+.welcome-slide-up {
+  animation: welcomeSlideUp 0.6s ease-out forwards;
+}
