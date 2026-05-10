@@ -95,7 +95,7 @@
 
       <c:choose>
 
-        <!-- ── ALL 5 ANSWERED ── -->
+        <%-- ── ALL 5 ANSWERED ── --%>
         <c:when test="${answeredCount >= 5}">
           <div class="card fade-in" style="text-align:center; padding: 48px 28px;">
             <div style="font-size: 3rem; margin-bottom: 16px;">🎉</div>
@@ -111,7 +111,7 @@
           </div>
         </c:when>
 
-        <!-- ── SHOW CURRENT QUESTION ── -->
+        <%-- ── SHOW CURRENT QUESTION ── --%>
         <c:otherwise>
           <div class="question-card card-flip-in" id="question-card">
 
